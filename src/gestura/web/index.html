@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestura</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><span class="logo">🖐</span>Gestura</div>
+  <div class="status">
+    <span id="camera" class="pill">камера…</span>
+    <span id="fps" class="pill">— fps</span>
+    <span id="count" class="pill">рук: 0</span>
+    <span id="link" class="pill bad">offline</span>
+  </div>
+</header>
+<main class="layout">
+  <section class="stage">
+    <div class="video">
+      <img id="stream" src="/stream.mjpg" alt="Камера">
+      <div id="error" class="error" hidden></div>
+    </div>
+    <div class="toggles">
+      <label><input type="checkbox" data-overlay="landmarks" checked> Скелет кисти</label>
+      <label><input type="checkbox" data-overlay="trails" checked> Траектории</label>
+      <label><input type="checkbox" data-overlay="boxes" checked> Рамки и подписи</label>
+    </div>
+  </section>
+  <aside class="side">
+    <section class="panel">
+      <h2>Руки в кадре</h2>
+      <div id="hands" class="hands"><p class="empty">Покажите руку в камеру</p></div>
+    </section>
+    <section class="panel">
+      <h2>События</h2>
+      <ol id="events" class="events"></ol>
+    </section>
+    <section class="panel">
+      <h2>Жесты</h2>
+      <ul id="legend" class="legend"></ul>
+    </section>
+  </aside>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

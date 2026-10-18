@@ -1,0 +1,26 @@
+[project]
+name = "gestura"
+version = "0.1.0"
+description = "Webcam hand gesture recognition with hand tracking, live web view and HTTP actions"
+requires-python = ">=3.11"
+dependencies = [
+    "mediapipe>=0.10.14",
+    "opencv-contrib-python>=4.9",
+    "numpy",
+    "fastapi>=0.110",
+    "uvicorn[standard]>=0.29",
+    "requests>=2.31",
+]
+
+[project.scripts]
+gestura = "gestura.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+gestura = ["web/*"]

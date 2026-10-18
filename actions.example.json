@@ -1,0 +1,20 @@
+{
+  "Thumb_Up": {
+    "url": "http://homeassistant.local:8123/api/services/light/turn_on",
+    "headers": { "Authorization": "Bearer ${HA_TOKEN}" },
+    "json": { "entity_id": "light.room", "brightness_step_pct": 20 }
+  },
+  "Thumb_Down": {
+    "url": "http://homeassistant.local:8123/api/services/light/turn_on",
+    "headers": { "Authorization": "Bearer ${HA_TOKEN}" },
+    "json": { "entity_id": "light.room", "brightness_step_pct": -20 }
+  },
+  "Closed_Fist": {
+    "url": "http://homeassistant.local:8123/api/services/light/toggle",
+    "headers": { "Authorization": "Bearer ${HA_TOKEN}" },
+    "json": { "entity_id": "light.room" }
+  },
+  "swipe_right": {
+    "url": "http://127.0.0.1:9000/gesture"
+  }
+}
