@@ -2,7 +2,7 @@
 
 gestura: local web app that recognizes hand gestures from the webcam (MediaPipe GestureRecognizer), tracks hands with persistent ids and trails, detects swipes and pinch, shows the annotated video with live events in the browser, and fires HTTP actions per gesture.
 
-The specification lives in `spec/` and is the source of truth: `architecture.md` (modules, API, events, actions), `gestures.md` (recognition, stabilization, tracking, swipes). Update the relevant spec file in the same change as the code. `README.md` is the quickstart only.
+The specification lives in `spec/` and is the source of truth: `spec.md` (behavior, consumers, acceptance criteria, known gaps, what it does not do — no class names), `architecture.md` (modules, API, events, actions), `gestures.md` (recognition, stabilization, tracking, swipes). Update the relevant spec file in the same change as the code. `README.md` is the public GitHub overview (English): keep its options, endpoints, settings table and limitations in sync with the code.
 
 ## Commands
 
